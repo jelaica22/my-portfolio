@@ -122,11 +122,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+import os
 # settings.py
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]  # For dev
-STATIC_ROOT = BASE_DIR / "staticfiles"    # For collectstatic (prod)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
