@@ -166,7 +166,7 @@ header nav ul li a:hover {
 
 .hero-image img {
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   border-radius: 20px;
   transition: all 0.6s ease;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
