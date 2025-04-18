@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q9)80qo(q_5#)aqm2d@uyxlqr8s9h(u)k*n-n_*t57+5w0(_gf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['my-portfolio-rtfx.onrender.com', 'localhost', '127.0.0.1']
 
