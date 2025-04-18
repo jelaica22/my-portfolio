@@ -103,3 +103,16 @@ toggleBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
   toggleBtn.innerHTML = navLinks.classList.contains("show") ? "&#10005;" : "&#9776;";
 });
+
+document.querySelectorAll('.about-card img').forEach(img => {
+  img.addEventListener('click', function() {
+    const modal = document.querySelector('.lightbox-modal');
+    const modalImage = modal.querySelector('img');
+    modal.style.display = 'flex';
+    modalImage.src = img.src;
+  });
+});
+
+document.querySelector('.lightbox-modal .close-btn').addEventListener('click', function() {
+  document.querySelector('.lightbox-modal').style.display = 'none';
+});
