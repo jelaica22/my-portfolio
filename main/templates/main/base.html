@@ -37,22 +37,32 @@
     {% block content %}{% endblock %}
 </main>
 
+<!-- Load Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <!-- Footer -->
-<footer>
+<footer style="padding: 2rem; text-align: center;">
   <h2>Stay Connected</h2>
   <p>Feel free to reach out and follow me on my social platforms.</p>
-  <ul>
-    <li><a href="mailto:jelaicabtabanag@gmail.com">Email</a></li>
-    <li><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></li>
-    <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
-    <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-  </ul>
-  <div class="social-links">
-    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+  <div class="social-links" style="margin-top: 1rem;">
+    <a href="mailto:jelaicabtabanag@gmail.com" title="Email" target="_blank" style="margin: 0 10px;">
+      <i class="fas fa-envelope fa-lg"></i>
+    </a>
+    <a href="https://facebook.com/yourprofile" title="Facebook" target="_blank" style="margin: 0 10px;">
+      <i class="fab fa-facebook fa-lg"></i>
+    </a>
+    <a href="https://twitter.com/yourprofile" title="Twitter" target="_blank" style="margin: 0 10px;">
+      <i class="fab fa-twitter fa-lg"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" title="LinkedIn" target="_blank" style="margin: 0 10px;">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+    <a href="https://instagram.com/yourprofile" title="Instagram" target="_blank" style="margin: 0 10px;">
+      <i class="fab fa-instagram fa-lg"></i>
+    </a>
   </div>
 </footer>
+
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
