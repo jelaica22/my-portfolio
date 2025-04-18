@@ -324,7 +324,7 @@ header nav ul li a:hover {
 
 /* === ABOUT ME SECTION === */
 .about-me {
-  padding: 80px 40px;
+  padding: 110px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -360,31 +360,37 @@ h2::after {
 }
 
 .about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: #fff;
-  border: 2px solid #d4af37;
-  border-radius: 14px;
-  padding: 15px;
+  border: 3px solid #d4af37;
+  border-radius: 20px;
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
+
 
 .about-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }
 
-/* Resize the image */
 .about-card img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 150px; /* Prevent image from becoming too tall */
+  max-width: 250px; /* limits how wide the image can go */
+  height: 280px; /* adjusted height */
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  border: 1.5px solid #c5a300;
+  border: 1.2px solid #c5a300; /* not too thick */
+  margin: 0 auto; /* center image inside the card */
+  display: block;
 }
+
 
 .about-card img:hover {
   transform: scale(1.05);
@@ -438,20 +444,16 @@ h2::after {
   cursor: pointer;
 }
 
-/* Responsive Layout Adjustments */
-@media (max-width: 1500px) {
+/* Responsive Layout Adjustments Only */
+@media (max-width: 150px) {
   .about-cards-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 250px) {
   .about-cards-container {
-    grid-template-columns: 1fr; /* Single column on small screens */
-  }
-
-  .about-card img {
-    max-height: 120px; /* Smaller images for small screens */
+    grid-template-columns: 1fr;
   }
 
   h2 {
@@ -461,7 +463,12 @@ h2::after {
   .about-me {
     padding: 60px 20px;
   }
+
+  .about-card img {
+    height: auto; /* Let image height adjust naturally on very small screens */
+  }
 }
+
 
 
 /* === Hobbies Section === */
