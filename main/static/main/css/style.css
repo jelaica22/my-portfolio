@@ -117,7 +117,7 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 160px; /* Creates space below navbar */;
+  padding-top: 50px; /* Creates space below navbar */;
   overflow: hidden;
   padding-bottom: 60px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
@@ -166,7 +166,7 @@ header nav ul li a:hover {
 
 .hero-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
   border-radius: 20px;
   transition: all 0.6s ease;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
@@ -324,7 +324,7 @@ header nav ul li a:hover {
 
 /* === ABOUT ME SECTION === */
 .about-me {
-  padding: 130px 40px;
+  padding: 100px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
 }
@@ -498,7 +498,7 @@ header nav ul li a:hover {
 
 /* === Hobbies Section === */
 .hobbies {
-  padding: 130px 40px;
+  padding: 100px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -632,7 +632,7 @@ h2 {
 
 /* === Projects Section === */
 .projects {
-  padding: 130px 40px;
+  padding: 100px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
@@ -801,7 +801,7 @@ h2 {
 
 /* === Contact Section === */
 .contact {
-  padding: 130px 40px;
+  padding: 100px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
@@ -967,7 +967,7 @@ h2 {
 
 /* === CONTACT FORM SECTION === */
 .contact-form {
-    padding: 130px 40px;
+    padding: 100px 40px;
     background: linear-gradient(to bottom, #fffdf7, #fdfbf5); /* Gradient background */
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1132,7 +1132,7 @@ h2 {
 
 /* === MESSAGE SUCCESS PAGE === */
 .message-container {
-    padding: 130px 40px;
+    padding: 100px 40px;
     background: linear-gradient(to bottom, #fffdf7, #fdfbf5); /* Gradient background */
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
