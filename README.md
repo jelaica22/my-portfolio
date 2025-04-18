@@ -36,7 +36,7 @@ This portfolio is hosted on **Render** and connected to **GitHub** for continuou
 
 If you'd like to collaborate, hire me, or simply connect:
 
-📧 Email: *[your-email@example.com]*  
+📧 Email: *[jelaicabtabanag@gmail.com]*  
 🌐 GitHub: [@jelaica22](https://github.com/jelaica22)
 
 ---
@@ -45,7 +45,7 @@ If you'd like to collaborate, hire me, or simply connect:
 
 Built with love and passion by  
 **[Jelaica B. Tabañag](https://github.com/jelaica22)**  
-“Putting God first in everything I do.”
+Putting God first in everything I do.
 
 ---
 
