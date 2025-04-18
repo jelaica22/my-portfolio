@@ -32,7 +32,6 @@ If you'd like to connect, feel free to message me!
 ## 🤍 Credits
 
 Built with love by [Jelaica B. Tabañag](https://github.com/jelaica22)  
-Assisted by ChatGPT 🤖
 
 ---
 
