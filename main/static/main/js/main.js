@@ -116,3 +116,5 @@ document.querySelectorAll('.about-card img').forEach(img => {
 document.querySelector('.lightbox-modal .close-btn').addEventListener('click', function() {
   document.querySelector('.lightbox-modal').style.display = 'none';
 });
+
+modal.classList.add('show');
