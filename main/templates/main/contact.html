@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+    <p>
+        Let’s connect and grow together! <br>
+        Whether it's a collaboration, a friendship, or a project idea—feel free to reach out!
+    </p>
+
+        <!-- General Contact Info -->
+        <ul>
+            <li>Email: <a href="mailto:jelaicabtabanag@gmail.com">jelaicabtabanag@gmail.com</a></li>
+            <li>Facebook: <a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></li>
+            <li>Location: Rizal St., Purok 8, Tinago, Bayawan City</li>
+        </ul>
+
+        <!-- Link to the Contact Form -->
+        <a href="{% url 'form' %}" class="btn">Send a Message</a>
+    </section>
+{% endblock %}

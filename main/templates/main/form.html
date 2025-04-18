@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="contact-form">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through the contact form below!</p>
+
+        <!-- Contact Form Starts Here -->
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{ form.name.label_tag }} <!-- Label for Name field -->
+                {{ form.name }} <!-- Name input field -->
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label_tag }} <!-- Label for Email field -->
+                {{ form.email }} <!-- Email input field -->
+            </div>
+
+            <div class="form-group">
+                {{ form.message.label_tag }} <!-- Label for Message field -->
+                {{ form.message }} <!-- Message input field -->
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <!-- Contact Form Ends Here -->
+    </section>
+{% endblock %}
