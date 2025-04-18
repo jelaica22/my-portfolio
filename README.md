@@ -32,6 +32,31 @@ This portfolio is hosted on **Render** and connected to **GitHub** for continuou
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](screenshots/homepage.png)
+
+### 💬 Contact Form
+![Contact Form](screenshots/contact_form.png)
+
+### ✅ Message Sent Successfully
+![Message Success](screenshots/message_success.png)
+
+### 📂 Projects Section
+![Projects](screenshots/project.png)
+
+### 🧑‍💼 About Me
+![About Me](screenshots/about.png)
+
+### 🎯 Hobbies Section
+![Hobbies](screenshots/hobbies.png)
+
+### 📞 Contact Section
+![Contact](screenshots/contact.png)
+
+---
+
 ## 📬 Contact
 
 If you'd like to collaborate, hire me, or simply connect:
