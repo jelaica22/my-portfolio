@@ -117,7 +117,7 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px; /* Creates space below navbar */;
+  padding-top: 80px; /* Creates space below navbar */;
   overflow: hidden;
   padding-bottom: 60px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
