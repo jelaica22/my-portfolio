@@ -335,7 +335,7 @@ h2 {
   font-size: 42px;
   font-weight: 700;
   color: #c5a300;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   animation: fadeInDown 1s ease-in-out;
   position: relative;
 }
@@ -614,8 +614,6 @@ h2 {
   text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
-
-
 
 .projects-header h2 {
   text-align: center;
