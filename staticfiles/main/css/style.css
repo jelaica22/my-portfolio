@@ -29,7 +29,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 14px;
 }
 
 header h1.logo {
@@ -117,7 +117,7 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 160px; /* Creates space below navbar */;
+  padding-top: 80px; /* Creates space below navbar */;
   overflow: hidden;
   padding-bottom: 60px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
@@ -166,7 +166,7 @@ header nav ul li a:hover {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   border-radius: 20px;
   transition: all 0.6s ease;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
@@ -324,181 +324,149 @@ header nav ul li a:hover {
 
 /* === ABOUT ME SECTION === */
 .about-me {
-  padding: 130px 40px;
+  padding: 80px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
-.about-me h2 {
-  text-align: center;
+/* Title Style */
+h2 {
   font-size: 42px;
   font-weight: 700;
   color: #c5a300;
-  margin-bottom: 60px;
-  position: relative;
+  margin-bottom: 20px;
   animation: fadeInDown 1s ease-in-out;
-  letter-spacing: 1px;
+  position: relative;
 }
 
-.about-me h2::after {
+h2::after {
   content: '';
-  width: 60px;
-  height: 4px;
-  background: #c5a300;
   display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #c5a300;
   margin: 12px auto 0;
   border-radius: 2px;
 }
 
-/* === ONE ROW FLEX === */
-.about-container {
-  display: flex;
+/* Grid of About Cards */
+.about-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   justify-content: center;
   align-items: stretch;
-  gap: 30px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 20px;
-  animation: fadeInUp 1s ease;
 }
 
 .about-card {
-  flex: 0 0 300px;
-  background: #ffffff;
-  border: 1px solid #eee2c5;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s ease;
-  scroll-snap-align: start;
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 14px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
 .about-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(197, 163, 0, 0.25);
-  border-color: #c5a300;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }
 
-/* === IMAGE SETTINGS === */
+/* Resize the image */
 .about-card img {
   width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 150px; /* Prevent image from becoming too tall */
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border: 1.5px solid #c5a300;
 }
 
-.divider-line {
-  height: 4px;
-  background: linear-gradient(to right, #c5a300, #f9e79f, #c5a300);
-  margin: 0;
+.about-card img:hover {
+  transform: scale(1.05);
 }
 
-/* === GOLDEN LINE BETWEEN IMAGE AND TEXT === */
-.about-card img::after {
-  content: "";
-  display: block;
-  height: 4px;
-  background: #c5a300;
-}
-
-/* === TEXT INSIDE CARD === */
 .about-text {
-  padding: 20px;
-  text-align: center;
+  margin-top: 10px;
 }
 
 .about-text h3 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
   color: #333;
-  margin-bottom: 10px;
 }
 
 .about-text p {
   font-size: 15px;
-  color: #5a5a5a;
-  line-height: 1.6;
+  color: #555;
+  margin-top: 6px;
 }
 
-/* === ANIMATIONS === */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
+/* Lightbox Modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-30px); }
-  100% { opacity: 1; transform: translateY(0); }
+.lightbox-modal img {
+  width: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  border: 5px solid #c5a300;
 }
 
-/* === SCROLLBAR === */
-.about-container::-webkit-scrollbar {
-  height: 6px;
-}
-.about-container::-webkit-scrollbar-thumb {
-  background: #c5a300;
-  border-radius: 4px;
+/* Close Button */
+.lightbox-modal .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
 }
 
-/* === RESPONSIVE DESIGN === */
+/* Responsive Layout Adjustments */
+@media (max-width: 1500px) {
+  .about-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
 
-/* Mobile Devices: Stacking the content vertically */
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .about-cards-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 
-  .about-card {
-    flex: 1 1 80%; /* Allow cards to take more width in smaller screens */
-    max-width: 600px; /* Max width to avoid stretching */
-    margin-bottom: 20px;
+  .about-card img {
+    max-height: 120px; /* Smaller images for small screens */
   }
 
-  .about-text h2 {
+  h2 {
     font-size: 30px;
   }
 
-  .about-text h3 {
-    font-size: 18px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-  }
-}
-
-/* Smaller screens (e.g., mobile devices under 480px) */
-@media (max-width: 480px) {
-  .about-container {
-    gap: 15px;
-  }
-
-  .about-card {
-    flex: 1 1 90%;
-    max-width: 100%; /* Max width to fit full screen */
-  }
-
-  .about-text h2 {
-    font-size: 28px;
-  }
-
-  .about-text h3 {
-    font-size: 16px;
-  }
-
-  .about-text p {
-    font-size: 12px;
+  .about-me {
+    padding: 60px 20px;
   }
 }
 
 
 /* === Hobbies Section === */
 .hobbies {
-  padding: 130px 40px;
+  padding: 110px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -632,7 +600,7 @@ h2 {
 
 /* === Projects Section === */
 .projects {
-  padding: 130px 40px;
+  padding: 110px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
@@ -640,9 +608,7 @@ h2 {
   animation: fadeIn 1s ease-in-out;
 }
 
-.projects-header {
-  margin-bottom: 50px;
-}
+
 
 .projects-header h2 {
   text-align: center;
@@ -801,7 +767,7 @@ h2 {
 
 /* === Contact Section === */
 .contact {
-  padding: 130px 40px;
+  padding: 110px 40px;
   background: linear-gradient(to bottom, #fffdf7, #fdfbf5);
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
@@ -967,7 +933,7 @@ h2 {
 
 /* === CONTACT FORM SECTION === */
 .contact-form {
-    padding: 130px 40px;
+    padding: 110px 40px;
     background: linear-gradient(to bottom, #fffdf7, #fdfbf5); /* Gradient background */
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -1132,7 +1098,7 @@ h2 {
 
 /* === MESSAGE SUCCESS PAGE === */
 .message-container {
-    padding: 130px 40px;
+    padding: 110px 40px;
     background: linear-gradient(to bottom, #fffdf7, #fdfbf5); /* Gradient background */
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
