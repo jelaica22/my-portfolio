@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelaica's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="icon" href="{% static 'main/images/port.png' %}" type="image/x-icon">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="{% static 'main/js/main.js' %}"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo">
+          <img src="{% static 'main/images/pot.png' %}" alt="Logo" style="height: 90px; vertical-align: middle;">
+        </h1>
+        <!-- Menu Toggle (hamburger) -->
+        <button id="menu-toggle">&#9776;</button>
+
+        <nav>
+            <ul id="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer>
+  <h2>Stay Connected</h2>
+  <p>Feel free to reach out and follow me on my social platforms.</p>
+  <ul>
+    <li><a href="mailto:jelaicabtabanag@gmail.com">Email</a></li>
+    <li><a href="https://facebook.com/yourprofile" target="_blank">Facebook</a></li>
+    <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
+    <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+  </ul>
+  <div class="social-links">
+    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+{% block scripts %}
+<script>
+    var swiperAbout = new Swiper(".aboutMeSwiper", {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiperHobbies = new Swiper(".myHobbiesSwiper", {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    // Toggle the visibility of the navigation links when the hamburger menu is clicked
+    navLinks.classList.toggle("show");
+
+    // Change the icon of the button to indicate whether the menu is open or closed
+    if (navLinks.classList.contains("show")) {
+      toggleBtn.innerHTML = "&#10005;"; // Change to 'X' when menu is open
+    } else {
+      toggleBtn.innerHTML = "&#9776;"; // Change back to hamburger when menu is closed
+    }
+  });
+</script>
+{% endblock %}
+
+</body>
+</html>

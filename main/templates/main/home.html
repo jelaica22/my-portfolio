@@ -1,0 +1,267 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-wrapper">
+    <!-- Left: Big Photo -->
+    <div class="hero-image">
+      <img src="{% static 'main/images/jelai.jpg' %}" alt="Jelaica B. Tabañag">
+    </div>
+
+    <!-- Right: Elegant Text -->
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Jelaica B. Tabañag</span></h1>
+      <p>3rd Year BSIT Student · Aspiring Programmer & Data Analyst</p>
+      <div class="hero-btns">
+        <a href="{% url 'project' %}" class="btn primary">View Projects</a>
+        <a href="{% url 'contact' %}" class="btn outline">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Me Section -->
+<section class="about-me" id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+
+    <!-- Card 1 -->
+    <div class="about-card">
+      <img src="{% static 'main/images/me.png' %}" alt="Jelaica's Photo">
+      <div class="divider-line"></div>
+      <div class="about-text">
+        <h3>Hi, I'm Jelaica</h3>
+        <p>
+          I'm passionate about tech, nature, and helping others. Currently, learning programming, digital marketing, and building cool projects with love & faith.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="about-card">
+      <img src="{% static 'main/images/SUN.jpg' %}" alt="Nature">
+      <div class="divider-line"></div>
+      <div class="about-text">
+        <h3>Nature Lover</h3>
+        <p>
+          I love sunsets, the sound of the sea, and peaceful moments in nature. It’s my way of recharging and reconnecting with God.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="about-card">
+      <img src="{% static 'main/images/yam.jpg' %}" alt="With John Rey Mart">
+      <div class="divider-line"></div>
+      <div class="about-text">
+        <h3>Love & Support</h3>
+        <p>
+          Exploring life with <strong>yam</strong> makes every moment special. We dream big, grow together, and support each other's goals.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="about-card">
+      <img src="{% static 'main/images/ceo.jpg' %}" alt="Dreaming Big">
+      <div class="divider-line"></div>
+      <div class="about-text">
+        <h3>My Dreams</h3>
+        <p>
+          I aim to become a programmer, a data analyst, or even a CEO! All for God’s glory, to help my family, and inspire others to reach their dreams too.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Hobbies Section -->
+<section class="hobbies" id="hobbies" style="display: block;">
+  <h2>Hobbies</h2>
+  <div class="hobby-cards-container">
+
+    <!-- Hobby Card 1 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/SUN.jpg' %}')">
+      <img src="{% static 'main/images/SUN.jpg' %}" alt="Sunset">
+      <p>Chasing sunsets and finding peace by the sea</p>
+    </div>
+
+    <!-- Hobby Card 2 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/SONG.jpg' %}')">
+      <img src="{% static 'main/images/SONG.jpg' %}" alt="Music">
+      <p>Listening to relaxing music with deep, meaningful lyrics</p>
+    </div>
+
+    <!-- Hobby Card 3 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/ANIME.jpg' %}')">
+      <img src="{% static 'main/images/ANIME.jpg' %}" alt="Books">
+      <p>Watching anime, C-dramas, and K-dramas — escaping into stories</p>
+    </div>
+
+    <!-- Hobby Card 4 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/GOD.jpg' %}')">
+      <img src="{% static 'main/images/GOD.jpg' %}" alt="Wattpad">
+      <p>Reading Wattpad stories and the Bible — fueling imagination and faith</p>
+    </div>
+
+    <!-- Hobby Card 5 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/CHESSS.jpg' %}')">
+      <img src="{% static 'main/images/CHESSS.jpg' %}" alt="Chess">
+      <p>Playing chess — challenging my mind and sharpening my focus</p>
+    </div>
+
+    <!-- Hobby Card 6 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/COOKING.jpg' %}')">
+      <img src="{% static 'main/images/COOKING.jpg' %}" alt="Cooking">
+      <p>Cooking delicious meals and experimenting with flavors</p>
+    </div>
+
+    <!-- Hobby Card 7 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/NATURES.jpg' %}')">
+      <img src="{% static 'main/images/NATURES.jpg' %}" alt="Nature and Fruits">
+      <p>Eating fruits, exploring nature, and embracing wellness</p>
+    </div>
+
+    <!-- Hobby Card 8 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/BETTER.jpg' %}')">
+      <img src="{% static 'main/images/BETTER.jpg' %}" alt="Jogging">
+      <p>Jogging, gym sessions, and staying strong physically and mentally</p>
+    </div>
+
+    <!-- Hobby Card 9 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/EXPLORE.jpg' %}')">
+      <img src="{% static 'main/images/EXPLORE.jpg' %}" alt="Exploring">
+      <p>Exploring new things and places to grow and recharge</p>
+    </div>
+
+    <!-- Hobby Card 10 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/JOURNALS.jpg' %}')">
+      <img src="{% static 'main/images/JOURNAL.jpg' %}" alt="Journaling">
+      <p>Journaling thoughts and prayers — connecting deeper with myself</p>
+    </div>
+
+    <!-- Hobby Card 11 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/CODING.jpg' %}')">
+      <img src="{% static 'main/images/CODING.jpg' %}" alt="Coding">
+      <p>Coding — creating solutions and exploring new tech</p>
+    </div>
+
+    <!-- Hobby Card 12 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/coffee.jpg' %}')">
+      <img src="{% static 'main/images/coffee.jpg' %}" alt="Coffee">
+      <p>Sipping on coffee — the perfect companion for coding and creativity</p>
+    </div>
+
+    <!-- Hobby Card 13 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/cats.jpg' %}')">
+      <img src="{% static 'main/images/cats.jpg' %}" alt="Cat">
+      <p>Spending time with cats — my furry companions</p>
+    </div>
+
+    <!-- Hobby Card 14 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/tech.jpg' %}')">
+      <img src="{% static 'main/images/tech.jpg' %}" alt="Tech">
+      <p>Exploring new technologies and innovations</p>
+    </div>
+
+    <!-- Hobby Card 15 -->
+    <div class="hobby-card" onclick="openLightbox('{% static 'main/images/relax.jpg' %}')">
+      <img src="{% static 'main/images/relax.jpg' %}" alt="Relaxation">
+      <p>Relaxing in nature and finding balance in life</p>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="close-btn" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImage" src="" alt="Zoomed Image">
+  </div>
+</section>
+
+<!-- Script for lightbox -->
+<script>
+  function openLightbox(imageSrc) {
+    document.getElementById('lightboxImage').src = imageSrc;
+    document.getElementById('lightboxModal').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightboxModal').style.display = 'none';
+  }
+</script>
+
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <div class="projects-header">
+    <h2>Projects</h2>
+    <p>I’ve worked on various school and personal projects, including:</p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-item">
+      <img src="{% static 'main/images/pos.jpg' %}" alt="POS System" class="project-img">
+      <p><strong>Restaurant POS System</strong> – Cloud sync, smart features, real-time data, and mobile-friendly design.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="{% static 'main/images/graphics.jpg' %}" alt="Digital Illustration" class="project-img">
+      <p><strong>Graphic Design</strong> – Event materials, branding assets, and creative artworks.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="{% static 'main/images/lo.png' %}" alt="Photoshop Logo Design" class="project-img">
+      <p><strong>Photoshop Logo Design</strong> – Designed creative logos using Adobe Photoshop for personal and academic branding.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="{% static 'main/images/ja.jpg' %}" alt="Web Development" class="project-img">
+      <p><strong>Web Development</strong> – Designed responsive websites with HTML, CSS, and JavaScript. Integrated backend with Django.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="{% static 'main/images/java.jpg' %}" alt="Java" class="project-img">
+      <p><strong>JavaScript Projects</strong> – Created interactive front-end features like modals, sliders, and form validations.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="{% static 'main/images/animation.jpg' %}" alt="Animation" class="project-img">
+      <p><strong>Animation</strong> – Designed animations using PowerPoint and Canva with custom motion paths and effects.</p>
+    </div>
+  </div>
+</section>
+<!-- Add this script at the bottom of your page -->
+<script>
+  // Check when the hobbies section is in view and trigger the animation
+  window.addEventListener('scroll', function() {
+    const hobbiesSection = document.querySelector('.hobbies');
+    const sectionPosition = hobbiesSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (sectionPosition < screenPosition) {
+      hobbiesSection.classList.add('visible');
+    }
+  });
+</script>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p>
+    Let's connect and grow together! Whether it’s a collaboration, friendship, or a project idea — feel free to reach out!
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:jelaicabtabanag@gmail.com">jelaicabtabanag@gmail.com</a></li>
+    <li>Facebook: <a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></li>
+    <li>Location: Rizal St., Purok 8, Tinago, Bayawan City</li>
+  </ul>
+  <a href="{% url 'contact' %}" class="btn">Send a Message</a>
+</section>
+
+{% endblock %}
