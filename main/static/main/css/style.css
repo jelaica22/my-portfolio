@@ -112,12 +112,12 @@ header nav ul li a:hover {
   width: 100%;
   min-height: 100vh;
   /* Background: image + a fallback dark color (or gradient) */
-  background: url("{% static 'main/images/nature.jpg' %}") no-repeat center center/cover, #2c3e50;
+  background: url("{% static 'main/images/SUN.jpg' %}") no-repeat center center/cover, #2c3e50;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px; /* Creates space below navbar */;
+  padding-top: 90px; /* Creates space below navbar */;
   overflow: hidden;
   padding-bottom: 60px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
