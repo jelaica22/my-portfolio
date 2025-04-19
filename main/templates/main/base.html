@@ -9,6 +9,7 @@
     <link rel="icon" href="{% static 'main/images/port.png' %}" type="image/x-icon">
     {% load static %}
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script defer src="{% static 'main/js/main.js' %}"></script>
 </head>
@@ -16,13 +17,15 @@
 <header>
     <div class="container">
         <h1 class="logo">
-          <img src="{% static 'main/images/pot.png' %}" alt="Logo" style="height: 80px; vertical-align: middle;">
+            <img src="{% static 'main/images/pot.png' %}" alt="Logo" style="height: 80px;  vertical-align: middle;">
         </h1>
-        <!-- Menu Toggle (hamburger) -->
-        <button id="menu-toggle">&#9776;</button>
 
+        <!-- Menu Toggle (Hamburger icon) -->
+        <button id="menu-toggle" onclick="openSidenav()">&#9776;</button>
+
+        <!-- Desktop Navigation -->
         <nav>
-            <ul id="nav-links">
+            <ul id="nav-links" class="desktop-nav">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
@@ -32,6 +35,17 @@
         </nav>
     </div>
 </header>
+
+<!-- ✅ Mobile Sidenav (now on the right) -->
+<div id="mobile-sidenav" class="mobile-sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidenav()">&times;</a>
+    <a href="{% url 'home' %}" onclick="closeSidenav()">Home</a>
+    <a href="#about" onclick="closeSidenav()">About</a>
+    <a href="#hobbies" onclick="closeSidenav()">Hobbies</a>
+    <a href="#projects" onclick="closeSidenav()">Projects</a>
+    <a href="#contact" onclick="closeSidenav()">Contact</a>
+</div>
+
 
 <main>
     {% block content %}{% endblock %}
@@ -141,6 +155,16 @@
       modalImg.src = '';
     }
   });
+</script>
+
+<script>
+function openSidenav() {
+    document.getElementById("mobile-sidenav").style.width = "250px";
+}
+
+function closeSidenav() {
+    document.getElementById("mobile-sidenav").style.width = "0";
+}
 </script>
 
 </body>
