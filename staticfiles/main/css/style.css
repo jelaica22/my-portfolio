@@ -1070,6 +1070,7 @@ h2 {
     resize: vertical;
 }
 
+
 /* === BUTTON STYLES === */
 .contact-form button {
     display: inline-block;
@@ -1164,7 +1165,6 @@ h2 {
         font-size: 0.9rem;
     }
 }
-
 
 /* === MESSAGE SUCCESS PAGE === */
 .message-container {
