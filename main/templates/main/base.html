@@ -21,20 +21,20 @@
             <img src="{% static 'main/images/pot.png' %}" alt="Logo" style="height: 80px;  vertical-align: middle;">
         </h1>
 
-        <!-- Menu Toggle (Hamburger icon) -->
-        <button id="menu-toggle" onclick="openSidenav()">&#9776;</button>
+       <!-- Menu Toggle (Hamburger icon) -->
+<button id="menu-toggle" onclick="openSidenav()">&#9776;</button>
 
-        <!-- Desktop Navigation -->
-        <nav>
-            <ul id="nav-links" class="desktop-nav">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<!-- Desktop Navigation -->
+<nav>
+    <ul id="nav-links" class="desktop-nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</div>
 </header>
 
 <!-- Mobile Sidenav (now on the right) -->
@@ -46,6 +46,17 @@
     <a href="#projects" onclick="closeSidenav()">Projects</a>
     <a href="#contact" onclick="closeSidenav()">Contact</a>
 </div>
+
+<!-- JavaScript for Opening and Closing the Sidenav -->
+<script>
+function openSidenav() {
+    document.getElementById("mobile-sidenav").style.width = "250px"; // Adjust width as needed
+}
+
+function closeSidenav() {
+    document.getElementById("mobile-sidenav").style.width = "0";
+}
+</script>
 
 
 <main>
