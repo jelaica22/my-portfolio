@@ -173,4 +173,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# Exclude collected static files
 /staticfiles/
+# Include your source static files
+!main/static/
